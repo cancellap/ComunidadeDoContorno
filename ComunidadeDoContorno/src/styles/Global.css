@@ -1,0 +1,34 @@
+:root {
+  --dark-green: #1f4529;
+  --medium-green: #47663b;
+  --medium-green-hover: #78986c;
+  --light-beige: #e8ecd7;
+  --soft-beige: #eed3b1;
+
+  /* Variações mais claras */
+  --dark-green-light: #3b5f3a; /* Tom mais claro de verde escuro */
+  --medium-green-light: #61874e; /* Tom mais claro de verde médio */
+  --soft-beige-light: #f1e6c7; /* Tom mais claro de bege suave */
+
+  /* Variações mais escuras */
+  --dark-green-dark: #17321a; /* Tom mais escuro de verde escuro */
+  --medium-green-dark: #2f4c29; /* Tom mais escuro de verde médio */
+  --soft-beige-dark: #d9b78a; /* Tom mais escuro de bege suave */
+
+  /* Cores complementares */
+  --light-green: #93b79e; /* Verde claro suave */
+  --light-beige-variant: #f3f0e0; /* Variante do bege claro */
+  --muted-brown: #b68c55; /* Tom de marrom suave */
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--light-beige);
+}

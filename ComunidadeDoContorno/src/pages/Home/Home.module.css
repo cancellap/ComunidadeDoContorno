@@ -1,0 +1,60 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90.1vh;
+  width: 80%;
+  background-color: var(--light-beige);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.cardImage {
+}
+
+/*CARD PARA TEXTO DA HOME*/
+
+.cardText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.text {
+  max-width: 800px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1.125rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .text {
+    padding: 20px;
+  }
+
+  .text h1 {
+    font-size: 2rem;
+  }
+
+  .text p {
+    font-size: 1rem;
+  }
+}
