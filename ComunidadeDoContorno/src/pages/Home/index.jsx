@@ -5,9 +5,8 @@ import { Carrossel } from "../../components/Carrossel";
 
 export default function Home() {
   const images = [
-    "https://via.placeholder.com/600x400?text=Imagem+1",
-    "https://via.placeholder.com/600x400?text=Imagem+2",
-    "https://via.placeholder.com/600x400?text=Imagem+3",
+    "https://i.ibb.co/Txb9xH30/DSC09242.jpg",
+    "https://i.ibb.co/fdF1zD3R/DSC-2789.jpg"
   ];
 
   return (

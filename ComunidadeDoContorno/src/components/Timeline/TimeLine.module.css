@@ -1,0 +1,101 @@
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #1f4529;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 3px;
+}
+
+.year {
+  color: #1f4529;
+  font-size: 1.3em;
+}
+.timelineItem {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  opacity: 0;
+}
+
+.timelineItem::after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  right: -12px;
+  background-color: white;
+  border: 4px solid #93b79e;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -13px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: #f0f0f0;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.timelineButton {
+  all: unset;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+
+.timelineButton:hover .content {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.timelineButton:focus .content {
+  outline: 2px solid #ff6b6b;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timelineItem {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .timelineItem::after {
+    left: 18px;
+  }
+
+  .right {
+    left: 0%;
+  }
+}
