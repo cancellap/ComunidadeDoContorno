@@ -1,14 +1,14 @@
 .pageContainer {
-  min-height: 100vh;
+  min-height: 90vh;
   background-color: var(--light-beige-variant);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 700px;
   width: 100%;
   margin: 0 auto;
   padding: 40px;

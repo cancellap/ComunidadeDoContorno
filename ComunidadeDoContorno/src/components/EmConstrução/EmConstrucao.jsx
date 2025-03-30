@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./TelaDeConstrucao.module.css";
-
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { MdEmail, MdConstruction } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 

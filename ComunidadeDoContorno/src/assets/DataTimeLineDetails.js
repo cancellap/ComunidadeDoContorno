@@ -5,7 +5,7 @@ export const timelineItems = [
         title: "Era de D. Pedro II",
         description: "Terras na região são concedidas a colonos alemães, incluindo as famílias Kresischer e Wayand, formando o 'Quarteirão Darmstadt'. A comunidade cresce com a chegada de outras famílias, como Dutra, Ramos, Firmo, e migrantes de Minas Gerais e cidades vizinhas.",
         longDescription: "",
-        image1: "https://i.ibb.co/fdF1zD3R/DSC-2789.jpg",
+        image1: "https://i.ibb.co/KjPnZpL3/850a6623-afba-4932-a1fd-ee31af57bcd6.jpg",
         image2: "",
         driveLink: "https://drive.google.com/file/d/193wJXWfWjDMqaQXMT7axxMff7Y0hGuDf/view?usp=drive_link",
     },
