@@ -59,7 +59,7 @@ const Timeline = ({ items }) => {
           position={index % 2 === 0 ? "left" : "right"}
           year={item.year}
           title={item.title}
-          description={item.description}
+          // description={item.description}
           id={item.id}
         />
       ))}

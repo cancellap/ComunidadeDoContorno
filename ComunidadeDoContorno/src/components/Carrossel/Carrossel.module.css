@@ -3,19 +3,26 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .carouselContent {
   position: relative;
   width: 100%;
-  height: 500px; /* Altura fixa ajustável */
+  height: 0;
+  padding-bottom: 56.25%;
   display: flex;
+  margin-top: 23px;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
 .imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -32,7 +39,6 @@
   display: block;
 }
 
-/* Estilos dos botões (mantidos do original) */
 .button {
   position: absolute;
   top: 50%;
@@ -44,31 +50,76 @@
   cursor: pointer;
   z-index: 10;
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .prev {
-  left: 10px;
+  left: 15px;
 }
 
 .next {
-  right: 10px;
+  right: 15px;
 }
 
 .dots {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
+  width: 12px;
+  height: 12px;
   background-color: #bbb;
   border-radius: 50%;
   cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: background-color 0.3s ease;
 }
 
 .dot.active {
   background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .carouselContent {
+    padding-bottom: 75%;
+  }
+
+  .button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselContent {
+    padding-bottom: 100%;
+  }
+
+  .button {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
 }

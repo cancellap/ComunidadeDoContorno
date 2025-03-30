@@ -7,6 +7,8 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
 }
 
 .navBar {
@@ -17,6 +19,10 @@
   max-width: 1200px;
 }
 
+.desktopMenu {
+  display: flex;
+}
+
 .option {
   text-decoration: none;
   color: var(--light-beige);
@@ -24,6 +30,7 @@
   font-weight: 500;
   margin: 0 100px;
   transition: color 0.3s ease;
+  padding: 10px;
 }
 
 .option:hover {
@@ -32,4 +39,104 @@
 
 .option:active {
   color: var(--medium-green);
+}
+
+/* Menu Hamburguer - Mobile */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menuIcon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  position: relative;
+}
+
+.menuIcon span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--light-beige);
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.menuIcon.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.menuIcon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuIcon.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Menu Mobile */
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background-color: var(--dark-green);
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.mobileMenu.open {
+  display: flex;
+}
+
+.mobileMenu .option {
+  margin: 10px 20px;
+  font-size: 1.2rem;
+  padding: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .option {
+    margin: 0 50px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktopMenu {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .mobileMenu .option {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    height: 80px;
+    padding: 10px 15px;
+  }
+
+  .mobileMenu {
+    top: 80px;
+  }
+
+  .option {
+    font-size: 1.1rem;
+  }
 }

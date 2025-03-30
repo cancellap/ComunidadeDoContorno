@@ -1,58 +1,136 @@
-.main {
+.pageContainer {
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90.1vh;
-  width: 80%;
+  flex-direction: column;
   background-color: var(--light-beige);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-.cardImage {
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+  align-items: start;
+  margin-top: 10%;
 }
 
-.cardText {
+.carouselColumn {
+  height: 100%;
+  min-height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.textColumn {
+  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
-.text {
-  max-width: 800px;
+.textContent {
   background-color: #fff;
   padding: 30px;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
-.text h1 {
-  font-size: 2.5rem;
+.textContent h1 {
+  font-size: 2.3rem;
   color: #333;
   margin-bottom: 20px;
 }
 
-.text p {
-  font-size: 1.125rem;
-  color: #666;
+.textContent p {
+  font-size: 1.4rem;
+  color: #282828;
   line-height: 1.6;
   margin-bottom: 20px;
+  text-align: justify;
 }
 
+@media (max-width: 992px) {
+  .gridContainer {
+    gap: 20px;
+  }
+
+  .carouselColumn {
+    min-height: 350px;
+  }
+
+  .textContent {
+    padding: 25px;
+  }
+
+  .textContent h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Responsividade para Celular */
 @media (max-width: 768px) {
-  .text {
+  .main {
+    padding: 15px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .carouselColumn {
+    min-height: 300px;
+    order: 1; /* Garante que o carrossel fique em cima */
+  }
+
+  .textColumn {
+    order: 2; /* Garante que o texto fique embaixo */
+  }
+
+  .textContent {
     padding: 20px;
   }
 
-  .text h1 {
-    font-size: 2rem;
+  .textContent h1 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
   }
 
-  .text p {
-    font-size: 1rem;
+  .textContent p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* Ajustes para celulares pequenos */
+@media (max-width: 480px) {
+  .main {
+    padding: 10px;
+  }
+
+  .carouselColumn {
+    min-height: 250px;
+    border-radius: 8px;
+  }
+
+  .textContent {
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .textContent h1 {
+    font-size: 1.4rem;
+  }
+
+  .textContent p {
+    font-size: 0.9rem;
   }
 }

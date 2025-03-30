@@ -17,7 +17,7 @@ export const Carrossel = ({ images }) => {
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
 
   return (
     <div className={styles.carousel}>
@@ -25,6 +25,7 @@ export const Carrossel = ({ images }) => {
         <button
           onClick={prevSlide}
           className={`${styles.button} ${styles.prev}`}
+          aria-label="Imagem anterior"
         >
           &lt;
         </button>
@@ -32,31 +33,34 @@ export const Carrossel = ({ images }) => {
         <div className={styles.imageContainer}>
           <img
             src={images[currentIndex]}
-            alt="Carrossel"
+            alt={`Slide ${currentIndex + 1}`} // Descrição mais acessível
             className={styles.carouselImage}
             onError={(e) => {
               e.target.src =
                 "https://via.placeholder.com/800x400?text=Imagem+não+carregada";
             }}
+            loading="lazy" // Otimização de carregamento
           />
         </div>
 
         <button
           onClick={nextSlide}
           className={`${styles.button} ${styles.next}`}
+          aria-label="Próxima imagem"
         >
           &gt;
         </button>
       </div>
       <div className={styles.dots}>
         {images.map((_, index) => (
-          <span
+          <button
             key={index}
             className={`${styles.dot} ${
               index === currentIndex ? styles.active : ""
             }`}
             onClick={() => setCurrentIndex(index)}
-          ></span>
+            aria-label={`Ir para slide ${index + 1}`}
+          />
         ))}
       </div>
     </div>

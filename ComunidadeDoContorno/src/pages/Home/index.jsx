@@ -5,42 +5,37 @@ import { Carrossel } from "../../components/Carrossel";
 
 export default function Home() {
   const images = [
-    "https://i.ibb.co/Txb9xH30/DSC09242.jpg",
-    "https://i.ibb.co/fdF1zD3R/DSC-2789.jpg"
+    "https://i.ibb.co/H00VB2K/E7e3e048-94ba-4dfe-a056-2916e7e6bd94.jpg",
+    "https://i.ibb.co/TMvwfqRs/a7ba0154-5963-4f3b-9731-4b39d7232257.jpg",
+    "https://i.ibb.co/KjPnZpL3/850a6623-afba-4932-a1fd-ee31af57bcd6.jpg"
   ];
 
   return (
-    <div>
+    <div className={styles.pageContainer}>
       <Header />
       <main className={styles.main}>
-        <Carrossel images={images} />
+        <div className={styles.gridContainer}>
+          <div className={styles.carouselColumn}>
+            <Carrossel images={images} />
+          </div>
 
-        <div className={styles.cardText}>
-          <div className={styles.text}>
-            <h1>Bem-vindo à Página Home</h1>
-            <p>
-              Este é o conteúdo principal da página, centralizado e com um
-              layout limpo. Insira aqui informações importantes sobre seu site,
-              produto ou serviço. Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Commodi nobis quaerat officiis? Deserunt
-              veritatis eius nobis! Cum explicabo optio voluptas deserunt est,
-              ipsam ducimus laboriosam laudantium nulla facilis nisi similique.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-              perspiciatis dolor ad nobis eligendi. Sed natus porro corporis
-              sunt, voluptate, inventore expedita ullam impedit ipsa laudantium
-              eos, quis nihil saepe.
-              Este é o conteúdo principal da página, centralizado e com um
-              layout limpo. Insira aqui informações importantes sobre seu site,
-              produto ou serviço. Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Commodi nobis quaerat officiis? Deserunt
-              veritatis eius nobis! Cum explicabo optio voluptas deserunt est,
-              ipsam ducimus laboriosam laudantium nulla facilis nisi similique.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-              perspiciatis dolor ad nobis eligendi. Sed natus porro corporis
-              sunt, voluptate, inventore expedita ullam impedit ipsa laudantium
-              eos, quis nihil saepe.
-              
-            </p>
+          <div className={styles.textColumn}>
+            <div className={styles.textContent}>
+              <h1> Comunidade do Contorno</h1>
+              <p>
+                A Comunidade do Contorno, localizada na altura do km 82 na
+                rodovia BR-040, tem seu histórico de formação ainda no século
+                XIX com a chegada de migrantes no local. A comunidade é uma
+                referência quando se trata de mobilização e luta pela garantia
+                de seus direitos, sempre se organizando e unindo para defender
+                seu território e seus direitos. As memórias de luta da
+                comunidade estão organizadas nesse site a fim de mantê-las vivas
+                e inspirar outros grupos a seguir lutando pela construção de
+                políticas públicas de maneira coletiva, que busque inserir a
+                população no planejamento, desenvolvimento e identificação de
+                problemas.
+              </p>
+            </div>
           </div>
         </div>
       </main>

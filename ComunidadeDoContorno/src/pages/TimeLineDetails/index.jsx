@@ -1,4 +1,3 @@
-// pages/TimeLineDetails.jsx
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
@@ -21,10 +20,10 @@ const TimeLineDetails = () => {
 
   const images = [];
   if (item.image1) images.push(item.image1);
-  if (item.image1) images.push(item.image2);
+  if (item.image2) images.push(item.image2);
 
   return (
-    <div>
+    <div className={styles.pageContainer}>
       <Header />
       <div className={styles.container}>
         <button onClick={() => navigate(-1)} className={styles.backButton}>
@@ -37,11 +36,10 @@ const TimeLineDetails = () => {
         </div>
 
         <div className={styles.content}>
-          <p className={styles.description}>{item.longDescription}</p>
+          <p className={styles.description}>{item.description}</p>
 
           {images.length > 0 && (
             <div className={styles.gallery}>
-              {/* <h3>Registros Históricos</h3> */}
               <div className={styles.images}>
                 {images.map((img, index) => (
                   <img
@@ -49,16 +47,22 @@ const TimeLineDetails = () => {
                     src={img}
                     alt={`Registro histórico ${index + 1}`}
                     className={styles.image}
+                    loading="lazy"
                   />
                 ))}
               </div>
-              <a
-                href={item.driveLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Mais informações
-              </a>
+              {item.driveLink && (
+                <button className={styles.button}>
+                  <a
+                    href={item.driveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.buttonLink}
+                  >
+                    Mais informações
+                  </a>
+                </button>
+              )}
             </div>
           )}
         </div>
