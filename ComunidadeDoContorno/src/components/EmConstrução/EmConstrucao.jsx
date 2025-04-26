@@ -31,7 +31,7 @@ const EmConstrucao = () => {
         <div className={styles.contactInfo}>
           <div className={styles.emailContact}>
             <MdEmail />
-            <span>contato@seusite.com</span>
+            
           </div>
 
           <button className={styles.button} onClick={handleGoHome}>
